@@ -36,9 +36,9 @@ This project focuses on cleaning and visualizing customer data from a mall datas
    ```bash
    cd Mall_Customers
    ```
-3. Install the required libraries:
+3. Install the required libraries: (pandas, seaborn, numpy, matplotlib)
    ```bash
-   pip install -r requirements.txt
+   pip install -r requirements
    ```
 4. Run the Jupyter Notebook:
    ```bash
