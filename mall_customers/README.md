@@ -53,10 +53,23 @@ This project focuses on cleaning and visualizing customer data from a mall datas
 
 ## 📈 Key Insights
 
+1. **Outliers as Meaningful Data Points:**
+
+   - Outliers in the dataset represent rare but valuable situations that provide meaningful insights, rather than data errors that need removal.
+
+2. **Age-Based Spending Patterns:**
+
+   - The most frequent customers belong to the 26–35 age group, exhibiting higher spending patterns compared to other groups.
+   - Customers aged 36–45 have the highest annual income, likely due to their greater work experience.
+
+3. **Weak Income-Spending Correlation:**
+   - The weak correlation between annual income and spending score suggests other factors may influence customer spending behavior that the current dataset does not capture.
+
 ## 🥇 Contributing
 
 Feel free to fork this repository and submit pull requests to improve the project.
 
 ## ✨ Author
 
-[Abdallah Rabie]
+[Abdallah Rabie Fayez]\
+[https://github.com/abdallah-9a]
