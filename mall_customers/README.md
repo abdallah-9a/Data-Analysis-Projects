@@ -18,6 +18,8 @@ This project focuses on cleaning and visualizing customer data from a mall datas
 - **Data Cleaning:**
   - Detect and handle missing data.
   - Remove outliers using the Interquartile Range (IQR) method.
+  - **Standardize Column Names and Values:** Ensure consistent naming conventions by converting column names to lowercase, replacing spaces with underscores, and removing special characters. \
+    Standardize categorical values by converting text to lowercase, removing extra spaces, and unifying similar categories
 - **Data Visualization:** Analyze customer spending patterns and visualize relationships between key features.
 
 ## 📊 Visualizations Included
@@ -36,9 +38,9 @@ This project focuses on cleaning and visualizing customer data from a mall datas
    ```bash
    cd Mall_Customers
    ```
-3. Install the required libraries:
+3. Install the required libraries:(pandas, seaborn, numpy, matplotlib)
    ```bash
-   pip install -r requirements.txt
+   pip install -r requirements
    ```
 4. Run the Jupyter Notebook:
    ```bash
@@ -46,15 +48,6 @@ This project focuses on cleaning and visualizing customer data from a mall datas
    ```
 
 ## 📈 Key Insights
-
-[Include one or two key insights from the visualizations or analysis]
-
-## 💍 Recommendations for Improvement
-
-- **Data Exploration:** Add more detailed EDA with feature summaries and statistical metrics.
-- **Outlier Analysis:** Consider visualizing the IQR outlier removal process with box plots for clarity.
-- **Additional Visualizations:** Incorporate interactive plots using Plotly or Dash for better exploration.
-- **Domain Insights:** Provide business recommendations based on the visualizations and patterns observed.
 
 ## 🥇 Contributing
 
