@@ -1,42 +1,71 @@
-# 📌 Nashville Housing Data Cleaning Project
+# Nashville Housing Data Analysis
 
-## 📄 Project Description
+## 📌 Project Overview
 
-This project focuses on cleaning a Nashville housing dataset using SQL. The goal is to standardize and preprocess the data, ensuring accuracy and consistency for further analysis.
-
----
-
-## 🛠️ Tools & Technologies
-
-- **SQL (MySQL / PostgreSQL / SQL Server)**
-- **Database Management System (DBMS)**
+This project focuses on cleaning and preprocessing the **Nashville Housing dataset** using **SQL**.
+The goal is to improve data quality by ensuring consistency, accuracy, and usability for further analysis.
 
 ---
 
-## ⚙️ Data Cleaning Steps
+## 🛠️ Data Cleaning Steps
 
-### 1️⃣ Splitting Address Columns
+To ensure data accuracy and consistency, the following preprocessing steps were applied:
 
-- **Property Address** → Separated into `property_address` and `property_city`.
-- **Owner Address** → Separated into `owner_address`, `owner_city`, and `owner_state`.
+### 🔹 1. Standardizing Column Names
 
-### 2️⃣ Standardizing Categorical Data
+Renamed columns for better readability and uniformity.
 
-- Converted `sold_as_vacant`:
-  - `'Y' → 'Yes'`
-  - `'N' → 'No'`
+### 🔹 2. Splitting Address Fields
 
-### 3️⃣ Handling Duplicates
+Separated compound address fields into distinct components for better data organization.
 
-- Identified and removed duplicate rows based on `parcel_id`, `land_use`, `sale_date`, `sale_price`, and `legal_reference`.
+### 🔹 3. Standardizing Categorical Data
 
-### 4️⃣ Dropping Unnecessary Columns
+Ensured consistency in categorical columns by converting values into a uniform format.
 
-- Removed original **`property_address`** and **`owner_address`** columns after extracting relevant details.
+### 🔹 4. Removing Duplicates
 
-### 5️⃣ Renaming Columns
+Identified and eliminated duplicate records to maintain data integrity.
 
-- `owner_address1` → `owner_address`
-- `property_street` → `property_address`
+### 🔹 5. Handling Missing Values
+
+Replaced empty values with `NULL` and removed records with excessive missing data.
+
+### 🔹 6. Correcting Data Types
+
+Converted columns to appropriate data types for accurate analysis and calculations.
+
+### 🔹 7. Formatting Numerical Data
+
+Standardized numerical fields by removing unwanted characters and ensuring proper formatting.
 
 ---
+
+## 📌 Tools Used
+
+- **SQL (MySQL / PostgreSQL)**
+- **Data Cleaning & Transformation**
+
+---
+
+## 🚀 Key Outcomes
+
+- Improved **data consistency** and **readability**.
+- Ensured **accurate numeric and categorical values**.
+- Made the dataset **ready for further analysis** in SQL, Python, or visualization tools.
+
+---
+
+## 📊 Next Steps
+
+- Conduct **exploratory data analysis (EDA)**.
+- Create **visualizations** to uncover insights.
+- Apply **machine learning** for predictive modeling.
+
+---
+
+## 📜 Author
+
+[Abdallah Rabie]
+
+Feel free to explore the dataset and modify queries to gain deeper insights! 😊
