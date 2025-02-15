@@ -47,7 +47,7 @@ The analysis aims to answer the following key questions:
 - 🔹 **Medal breakdown for each country across all Olympic Games.**
 - 🔹 **Countries that won silver/bronze but never gold.**
 - 🔹 **In which sport has Egypt won the most medals?**
-- 🔹 **Breakdown of all Olympic Games where Egypt won medals in Hockey**.
+- 🔹 **Breakdown of all Olympic Games where India won medals in Hockey**.
 
 ---
 
