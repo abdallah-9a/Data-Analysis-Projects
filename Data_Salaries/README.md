@@ -39,6 +39,29 @@ To ensure data consistency and accuracy, the following cleaning tasks were perfo
 
 - Verified no missing or duplicate values.
 
+## 📊 Key Insights
+
+### **From the Cleaned Data:**
+
+✔ **Salaries have increased over the years.**  
+✔ **Executive-level roles earn the highest average salaries.**  
+✔ **Part-time and full-time employees receive the highest salaries.**  
+✔ **Medium and large companies offer the highest salaries, but small companies are not far behind.**  
+✔ **Remote and in-site jobs have the highest average salaries.**  
+✔ **Companies exist across multiple countries, but Russia has the highest average salary.**  
+✔ **Principal Data Engineer is the highest-paying job title.**
+
+### **From the Outliers Data:**
+
+✔ **Most outliers are remote employees.**  
+✔ **Large companies employ the majority of high-salary outliers.**  
+✔ **Full-time contracts dominate among high-salary employees.**  
+✔ **Unlike the cleaned dataset, there are no executive-level employees in the outliers.**  
+✔ **Only full-time and part-time jobs appear in the outliers.**  
+✔ **All outlier companies are based in the USA.**  
+✔ **Outlier salaries show a sudden increase in 2021, followed by a decline in 2022.**  
+✔ **Principal Data Engineer is the highest-paying job title among outliers.**
+
 ## 🥇 Contributing
 
 Feel free to fork this repository and submit pull requests to improve the project.
