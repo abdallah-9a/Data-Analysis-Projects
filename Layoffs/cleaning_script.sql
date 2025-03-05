@@ -132,10 +132,39 @@ select *
 from layoffs_copy
 where industry is NULL ;
 
--- 
+-- Fill missing values (NULL) in inustry column
 select t1.industry , t2.industry, t1.company
 from layoffs_copy AS t1
 join layoffs_copy AS t2
 on t1.company = t2.company
 where t1.industry is null 
 and t2.industry is not null;
+
+-- As Each comapny has unique industry, then can fill NULL values by Non-NULL values that have the same company
+
+UPDATE layoffs_copy AS t1
+JOIN layoffs_copy AS t2 
+ON t1.company = t2.company  
+SET t1.industry = t2.industry
+WHERE t1.industry IS NULL 
+AND t2.industry IS NOT NULL;
+
+-- Remove the unusable or Rows
+
+-- If the laid-off and percentage of laid-off is missing then this row will be meaningless
+
+select *
+from layoffs_copy
+where total_laid_off is null 
+and percentage_laid_off is null;
+
+-- then delete these rows
+delete
+from layoffs_copy
+where total_laid_off is null 
+and percentage_laid_off is null;
+
+select *
+from layoffs_copy;
+
+-- Id column isn't useful now, but no problem to be found
