@@ -6,24 +6,20 @@ This project focuses on cleaning and preparing a dataset containing company layo
 ---
 
 ## 🛠️ Data Cleaning Steps  
-The following cleaning operations were performed:  
+✅ **1. Remove Duplicates**  
+- Used **window functions (ROW_NUMBER)** to detect and remove duplicate rows.  
+- Added an **ID column** for efficient duplicate removal.  
 
-### ✅ **1. Remove Duplicates**  
-- Created a backup table to **preserve raw data**.  
-- Identified duplicates using **window functions (ROW_NUMBER)**.  
-- Removed duplicate rows to ensure data integrity.  
+✅ **2. Standardize Data**  
+- Trimmed whitespace and corrected formatting in **company, industry, and country** columns.  
+- Converted **date format** to SQL `DATE` type.  
 
-### ✅ **2. Standardizing Data**  
-- **Trimmed whitespace** from company names.  
-- **Normalized industry and country names** to maintain consistency.  
-- **Converted date format** to standard SQL `DATE` type.  
+✅ **3. Handle NULL & Blank Values**  
+- Replaced blanks with **NULL values** for consistency.  
+- Filled missing industry values using existing company data.  
 
-### ✅ **3. Handling NULL & Blank Values**  
-- Replaced missing values in **Industry** by filling from other matching records.  
-- Removed rows where both `total_laid_off` and `percentage_laid_off` were NULL.  
-
-### ✅ **4. Removing Unwanted Columns**  
-- Dropped the `row_num` column (used for duplicate removal).  
+✅ **4. Remove Unwanted Data**  
+- Deleted rows where **layoff numbers were completely missing**.   
 
 ---
 
