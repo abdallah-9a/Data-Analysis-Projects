@@ -117,6 +117,17 @@ set date = str_to_date(date , '%m/%d/%Y');
 alter table layoffs_copy
 modify date DATE;
 
+-- Change data type to 'total_laid_off' column
+alter table layoffs_copy
+modify total_laid_off int;
+
+-- Change data type to 'percentage_laid_off' column
+alter table layoffs_copy
+modify percentage_laid_off float;
+
+-- Change data type to 'funds_raised_millions' column
+alter table layoffs_copy
+modify funds_raised_millions int;
 
 -- NULL and blanks values
 
@@ -148,6 +159,7 @@ ON t1.company = t2.company
 SET t1.industry = t2.industry
 WHERE t1.industry IS NULL 
 AND t2.industry IS NOT NULL;
+
 
 -- Remove the unusable or Rows
 
