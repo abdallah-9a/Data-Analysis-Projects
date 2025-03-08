@@ -48,8 +48,35 @@ from warehouse_and_retail_sales
 group by year, month
 order by year, month asc;
 
+-- what is the difference in retail sales between each month and the previous month, for each supplier and item type?
+SELECT 
+    supplier, 
+    item_type, 
+    year, 
+    month, 
+    retail_sales,
+    retail_sales - LAG(retail_sales) OVER (
+        PARTITION BY supplier, item_type ORDER BY year, month
+    ) AS difference_retail_sales
+FROM warehouse_and_retail_sales;
 
 
+-- what is the average retail sales for each item type compared to the overall average retail sales across all item types for each year?
 
-
-
+with cte_overall_avg 
+as 
+(
+	select year, avg(retail_sales) as avg_retail_sales
+    from warehouse_and_retail_sales
+    group by year
+),
+cte_result as 
+(
+select year, item_type, avg(retail_sales) as avg_retail_sales_per_item, (avg(retail_sales) - overall.avg_retail_sales) as Difference_from_overall_avg
+from warehouse_and_retail_sales join cte_overall_avg as overall
+using(year)
+group by year, item_type
+ORDER BY year, item_type
+)
+select *
+from cte_result;
